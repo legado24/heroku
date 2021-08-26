@@ -28,8 +28,8 @@ public class CompanyDaoImpl implements CompanyDao{
             try {
                 CompanyResponse companyResponse=new CompanyResponse();
                 StatusResponse statusResponse=new StatusResponse();
-                CallableStatement cs=connection.prepareCall("{?= call list_company()}");
-                cs.setObject(1,Types.OTHER);
+                CallableStatement cs=connection.prepareCall("{?= call list_companies()}");
+                cs.registerOutParameter(1, Types.OTHER);
                 cs.execute();
                 ResultSet rs=(ResultSet) cs.getObject(1);
                 List<Company> companies=new ArrayList<>();

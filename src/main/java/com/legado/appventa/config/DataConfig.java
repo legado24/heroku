@@ -114,6 +114,7 @@ public class DataConfig {
             ds.setMaxActive(10);
             ds.setRemoveAbandoned(true);
             ds.setLogAbandoned(true);
+            ds.setDefaultAutoCommit(false);
           //  ds.setValidationQuery("SELECT 1");
             return ds;
         }

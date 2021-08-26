@@ -35,7 +35,8 @@
         <!--   <input type="hidden" id="hid_basePath" value="${pageContext.request.contextPath}" /> -->
           <div class="col-lg-12">
               <div class="ibox float-e-margins">
-                  <div class="ibox-title"><h4>lista de clientes</h4>
+                  <div class="ibox-title"><h4>lista de clientes s ${appName}</h4>
+                    <p th:text="'Hello, ' + ${appName} + '!'" />
                       <div class="ibox-tools">
                           <div style="float:right;">
                               <button type="button" class="btn btn-success btn-circle btn-outline mensa" name="btn_agregar" id="btn_agregar" data-style="expand-right" title="Nueva nota de crédito">
