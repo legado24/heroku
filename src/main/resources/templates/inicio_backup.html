@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link href="/theme/css/bootstrap.min.css "rel="stylesheet">
+    <link href="/theme/font-awesome/css/font-awesome.css "rel="stylesheet">
+  
+    <link href= "/theme/css/plugins/dataTables/jquery.dataTables.min.css "rel="stylesheet">
+    <link href= "/theme/js/plugins/gritter/jquery.gritter.css "rel="stylesheet">
+    <link href= "/theme/css/plugins/toastr/toastr.min.css "rel="stylesheet">
+    <link href= "/theme/css/plugins/datapicker/datepicker3.css "rel="stylesheet">
+    <link href= "/theme/css/plugins/ladda/ladda-themeless.min.css "rel="stylesheet">
+   
+    <link href= "/theme/css/plugins/bootstrap-select/bootstrap-select.min.css "rel="stylesheet">
+    <link href= "/theme/css/plugins/clockpicker/clockpicker.css "rel="stylesheet">
+    <link href= "/theme/css/plugins/sweetalert/sweetalert.css "rel="stylesheet">
+    <link href= "/theme/css/plugins/bootstrap-toggle/bootstrap-toggle.min.css "rel="stylesheet ">
+    <link href= "/theme/css/plugins/iCheck/custom.css "rel="stylesheet">
+    <link href= "/theme/css/animate.css "rel="stylesheet">
+    <link href= "/theme/css/plugins/iCheck/custom.css "rel="stylesheet">
+    <link href= "/theme/css/style.css "rel="stylesheet">
+    <link href= "/css/custom.css "rel="stylesheet">
+</head>
+<body>
+    <h2>ADRIAN dev tooll s </h2>
+
+     
+     <div id="div_principal" class="row">
+      <!--   <input type="hidden" id="hid_basePath" value="${pageContext.request.contextPath}" /> -->
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title"><h4>lista de clientes</h4>
+                    <div class="ibox-tools">
+                        <div style="float:right;">
+                            <button type="button" class="btn btn-success btn-circle btn-outline mensa" name="btn_agregar" id="btn_agregar" data-style="expand-right" title="Nueva nota de crédito">
+                                <i class="fa fa-plus fa-lg"></i>
+                            </button>
+                            <button type="button" class="btn btn-warning btn-circle btn-outline ladda-button mensa" name="btn_buscar" id="btn_buscar" data-style="expand-right" title="Buscar notas de crédito">
+                                <span class="ladda-label"></span><span class="ladda-spinner"></span><i class="fa fa-search fa-lg"></i>
+                            </button>
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="fullscreen-link">
+                                <i class="fa fa-expand"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <form method="post" name="frm_Busqueda" id="frm_Busqueda" class="form-horizontal" onsubmit="return false;">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                <div class="form-group">
+                                    <label class="col-lg-12">Empresa</label>
+                                    <div class="col-lg-12">
+                                        <select class="col-xs-12 form-control input-sm selectpicker " name="sel_empresa" id="sel_empresa"  title="SELECCIONAR" data-live-search="true" multiple data-actions-box="true" data-select-all-text="Todos" data-deselect-all-text="Ninguno">
+                                        </select> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                <div class="form-group">
+                                    <label class="col-lg-12">Sede</label>
+                                    <div class="col-lg-12">
+                                     <select class="col-xs-12 form-control input-sm selectpicker " name="sel_sede" id="sel_sede"   title="SELECCIONAR" data-live-search="true" multiple data-actions-box="true" data-select-all-text="Todos" data-deselect-all-text="Ninguno">
+                                        </select> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                <div class="form-group">
+                                    <label class="col-lg-12">Fecha inicio</label>
+                                    <div class="col-lg-12">
+                                        <div id="div_fechaInicio" class="input-group date">
+                                            <input type="text" maxlength="10" class="form-control input-sm" id="txt_fechaInicio">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
+                                <div class="form-group">
+                                    <label class="col-lg-12">DNI / RUC</label>
+                                    <div class="col-lg-12">
+                                        <input type="text" class="form-control input-sm text-uppercase" name="txt_dniRuc" id="txt_dniRuc"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
+                                <div class="form-group">
+                                    <label class="col-lg-12">Numeración</label>
+                                    <div class="col-lg-12">
+                                        <input type="text" class="form-control input-sm text-uppercase" name="txt_dniRuc" id="txt_numeracion"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                <div class="form-group">
+                                    <label class="col-lg-12">Fecha fin</label>
+                                    <div class="col-lg-12">
+                                        <div id="div_fechaFin" class="input-group date">
+                                            <input type="text" maxlength="10" class="form-control input-sm" id="txt_fechaFin">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
+                                <table id="tbl_notasCredito" class="table table-striped table-bordered table-hover table-condensed">
+                                    <thead id="tbl_notasCredito_head"></thead>
+                                    <tbody id="tbl_notasCredito_body"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------------------------   AGREGAR NUEVA NOTA DE CRÉDITO  --------------------------------->
+     
+    <!------------     Modal para datos seleccionar el documento para crear una nueva nota de crédito        ----------------->
+    <div class="modal" id="mdl_seleccionarDocumento" >
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header" style="padding: 15px !important;">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                            <h3 class="modal-title">Buscar documentos</h3>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12" style="text-align: right;">
+                            <!--button type="button" name="btn_guardarArtAgrupados" id="btn_guardarArtAgrupados" class="btn btn-primary btn-circle btn-outline" data-dismiss="modal" data-original-title="Guardar artículo"><i class="fa fa-check"></i></button-->
+                            <button type="button" name="btn_mdlCancelar" id="btn_mdlCancelar" class="btn btn-danger btn-circle btn-outline" data-dismiss="modal" data-original-title="Cancelar"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="table-responsive">
+                            <table id="tbl_mdlDocumentos" style="table-layout: fixed;" class="table table-striped table-bordered table-hover table-condensed">
+                                <thead id="tbl_mdlDocumentos_head">
+                                    <tr>
+                                        <th class="cabecera-color" width="5%"></th>
+                                        <th class="cabecera-color" width="15%">DNI / RUC</th>
+                                        <th class="cabecera-color" width="40%">Cliente</th>
+                                        <th class="cabecera-color" width="15%">Secuencia</th>
+                                        <th class="cabecera-color" width="15%">Numeración</th>
+                                        <th class="cabecera-color" width="10%">Monto</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbl_mdlDocumentos_body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!------------     Modal para datos seleccionar el documento por cliente para crear una nueva nota de crédito        ----------------->
+    <div class="modal" id="mdl_seleccionarDocumentoCliente" >
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header" style="padding: 15px !important;">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                                <h3 class="modal-title">Buscar documentos por cliente</h3>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12" style="text-align: right;">
+                                <!--button type="button" name="btn_guardarArtAgrupados" id="btn_guardarArtAgrupados" class="btn btn-primary btn-circle btn-outline" data-dismiss="modal" data-original-title="Guardar artículo"><i class="fa fa-check"></i></button-->
+                                <button type="button" name="btn_mdlCancelarCliente" id="btn_mdlCancelarCliente" class="btn btn-danger btn-circle btn-outline" data-dismiss="modal" data-original-title="Cancelar"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
+                            <div class="form-group">
+                                <label class="col-lg-12">DNI / RUC</label>
+                                <div class="col-lg-12">
+                                    <input type="text" class="form-control input-sm text-uppercase" name="txt_mdlDniRuc" id="txt_mdlDniRuc" style="text-align: center;"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 ">
+                            <div class="form-group">
+                                <label class="col-lg-12">Cliente</label>
+                                <div class="col-lg-12" >
+                                    <input readonly type="text" class="form-control input-sm text-uppercase" name="txt_mdlcliente" id="txt_mdlcliente"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
+                                <table id="tbl_mdlCliente" style="table-layout: fixed;" class="table table-striped table-bordered table-hover table-condensed">
+                                    <thead id="tbl_mdlCliente_head">
+                                    <tr>
+                                        <th class="cabecera-color" width="10%"></th>
+                                        <th class="cabecera-color" width="30%">DNI / RUC</th>
+                                        <th class="cabecera-color" width="60%">Cliente</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="tbl_mdlCliente_body"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
+                                <table id="tbl_mdlDocumentosCliente" style="table-layout: fixed;" class="table table-striped table-bordered table-hover table-condensed">
+                                    <thead id="tbl_mdlDocumentosCliente_head">
+                                    <tr>
+                                        <th class="cabecera-color" width="10%"></th>
+                                        <th class="cabecera-color" width="35%">Secuencia</th>
+                                        <th class="cabecera-color" width="35%">Numeración</th>
+                                        <th class="cabecera-color" width="20%">Monto</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="tbl_mdlDocumentosCliente_body"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Main scripts -->
+<script type="text/javascript" src="/theme/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="/theme/js/popper.min.js"></script>
+<script type="text/javascript" src="/theme/js/bootstrap.min.js"></script>
+<!-- Custom and plugin javascript -->
+<script type="text/javascript" src="/theme/js/inspinia.js"></script>
+<script type="text/javascript" src="/theme/js/plugins/pace/pace.min.js"></script>
+<script type="text/javascript" src="/theme/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<!-- <script type="text/javascript" src="/theme/js/plugins/fullcalendar/moment.min.js"></script> -->
+<script type="text/javascript" src="/theme/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script type="text/javascript" src="/theme/js/plugins/dataTables/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/theme/js/plugins/toastr/toastr.min.js"></script>
+<script type="text/javascript" src="/theme/js/plugins/gritter/jquery.gritter.min.js"></script>
+<script type="text/javascript" src="/theme/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="/theme/js/plugins/ladda/spin.min.js"></script>
+<script type="text/javascript" src="/theme/js/plugins/ladda/ladda.min.js"></script>
+<script type="text/javascript" src="/theme/js/plugins/ladda/ladda.jquery.min.js"></script>
+<script type="text/javascript" src="/theme/js/plugins/bootstrap-select/bootstrap-select.min.js"></script>
+<script type="text/javascript" src="/theme/js/plugins/tinycon/tinycon.min.js"></script>
+<script type="text/javascript" src="/theme/js/plugins/sweetalert/sweetalert.min.js"></script>
+<script type="text/javascript" src="/theme/js/plugins/clockpicker/clockpicker.js"></script>
+<script type="text/javascript" src="/theme/js/plugins/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+<script type="text/javascript" src="/theme/js/plugins/iCheck/icheck.min.js"></script>
+
+<!-- <script type="text/javascript" src="/js/util/methods.js"></script> -->
+<script type="text/javascript" src="/js/util/widgets.js"></script>
+<script type="module" src="/js/customer.js"></script>
+   
+      
+</body>
+</html>

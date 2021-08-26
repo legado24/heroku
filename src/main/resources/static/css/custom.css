@@ -1,0 +1,226 @@
+.modal-dialog-full-width {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+}
+
+.modal-content-full-width {
+    height: auto !important;
+    min-height: 100% !important;
+    border-radius: 0 !important;
+}
+
+.modal-header-full-width {
+    border-bottom: 1px solid #9ea2a2 !important;
+}
+
+.modal-footer-full-width {
+    border-top: 1px solid #9ea2a2 !important;
+}
+
+.cabecera-color {
+    background-color: #67809F !important;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.btn-circulo {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50% !important;
+    transition: width .3s, height .3s, font-size .3s;
+    font-size: 20px;
+    margin: 3px 0 3px 0;
+    color: #FFFFFF !important;
+}
+
+.btnflotante {
+    max-height: 20px !important;
+    font-size: 15px !important;
+    transition: transform .25s ease-in-out;
+    color: inherit !important;
+}
+
+.tooltip {
+    pointer-events: none;
+}
+
+.tooltip.left {
+    margin-right: 45px !important;
+}
+
+.btn-sm-circle {
+    width: 43px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50% !important;
+    transition: width .3s, height .3s, font-size .3s;
+    font-size: 20px;
+    margin: 3px 0 3px 0;
+    color: #FFFFFF !important;
+}
+
+.btn-manager-float {
+    max-height: 20px !important;
+    font-size: 15px !important;
+    transition: transform .25s ease-in-out;
+    color: inherit !important;
+}
+
+.btn-rotate-90 {
+    transform: rotate(90deg);
+}
+
+.btn-rotate-180 {
+    transform: rotate(180deg);
+}
+
+.btn-manager-float.btn-rotate-90 {
+    max-width: 20px !important;
+}
+
+.btn-manager-float.btn-rotate-180 {
+    max-width: 20px !important;
+}
+
+.float-center {
+    background-color: rgba(0, 0, 0, .1);
+    padding: 5px 0 5px 5px;
+    border-radius: 10px 0 0 10px;
+    position: fixed;
+    right: 0;
+    width: auto;
+    z-index: 2500;
+    top: 50%;
+    transform: translateY(-50%);
+    visibility: visible;
+    opacity: 1;
+    transition: width .3s, height .3s, opacity .5s, visibility .5s;
+    /* left: 50%; */
+    /* bottom: 39px; */
+    /* bottom: 0;*/
+}
+
+.float-bottom {
+    background-color: rgba(0, 0, 0, .1);
+    padding: 5px 0 5px 5px;
+    border-radius: 10px 0 0 10px;
+    position: fixed;
+    right: 0;
+    width: auto;
+    z-index: 2500;
+    bottom: 39px;
+    transition: width .3s, height .3s;
+}
+
+.float-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.ibox-title {
+    font-weight: bold !important;
+}
+
+:root {
+    --sk-color: #1BB394 !important;
+}
+
+.espacial {}
+
+.espacial:hover {
+    -moz-transform: scaleX(-1);
+    /* Firefox */
+    -o-transform: scaleX(-1);
+    /* Opera */
+    -webkit-transform: scaleX(-1);
+    /* Chrome y Safari */
+    transform: scaleX(-1);
+    /* w3org */
+}
+
+.container-fluid {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.btn-group-sm .btn-fab {
+    position: fixed !important;
+    right: 29px;
+}
+
+.btn-group .btn-fab {
+    position: fixed !important;
+    right: 0;
+}
+
+.btnHover:hover {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px 20px;
+}
+
+.zoom {
+    position: fixed;
+    bottom: 105px;
+    right: 0;
+    height: 70px;
+    z-index: 1000;
+}
+
+.zoom-fab {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    vertical-align: middle;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+}
+
+.zoom-btn-large {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+}
+
+.zoom-menu {
+    position: absolute;
+    right: 40px;
+    left: auto;
+    /*top: 50%;*/
+    /*transform: translateY(-50%);*/
+    /*height: 100%;*/
+    width: 300px;
+    /*list-style: none;*/
+    text-align: right;
+    color: white;
+}
+
+.zoom-menu li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.scale-transition {
+    transition: transform 0.3s cubic-bezier(0.53, 0.01, 0.36, 1.63) !important;
+}
+
+.scale-transition.scale-out {
+    transform: scale(0);
+    transition: transform 0.2s !important;
+    display: none;
+}

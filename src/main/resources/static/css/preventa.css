@@ -1,0 +1,90 @@
+@media (min-width: 576px) {
+    #mdlSearchCustomer .modal-dialog {
+        max-width: 1050px !important;
+        margin: 1.75rem auto !important;
+    }
+    #tblCustomer{
+        width:  1030px;
+    }
+    #tblShoppingCart{
+         /*width: 950px!important;*/
+        width: 100% !important;
+     }
+
+    #mdlSearchProduct .modal-dialog {
+     max-width:750px !important;    /*  900px !important;*/
+        margin: 1.75rem auto !important;
+    }
+
+    #mdlPrevisualizar.modal-content {
+        max-width:1050px !important;    /*  900px !important;*/
+        margin: 1.75rem auto !important;
+    }
+
+}
+#mdlPrevisualizar.modal-content {
+    width:700px !important;    /*  900px !important;*/
+    margin: 1.75rem auto !important;
+}
+#demo label input{
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+}
+.filter-option-inner-inner{
+    font-family:"Calibri Light";
+
+    font-size: 12px;;
+}
+input{
+    font-family:"Calibri Light";
+
+    font-size: 12px;
+}
+
+.dropdown-menu > .active > a:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color:#67809f!important;
+    outline: 0;
+}
+.dropdown-menu > .active > a {
+    color: #fff;
+    text-decoration: none;
+    background-color:#67809f!important;
+    outline: 0;
+}
+
+.inner.show{
+    min-height:20px!important;
+}
+.dropdown-menu.show{
+    min-height:20px!important;
+}
+.input-sm .btn-sm  {
+    height: 25px;
+    margin-top: 5px;
+}
+input{
+    height: 28px !important;
+}
+.btn-sm{
+    height: 28px !important;
+}
+th{
+    font-size: 11px;
+}
+.force-hide {
+    display: none !important;
+}
+.dropdown{
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+}
+
+.headerPrev{
+    text-align: center!important;
+
+    color: white;
+    font-weight: bold;
+}
