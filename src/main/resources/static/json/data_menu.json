@@ -1,0 +1,32 @@
+[
+    {
+        "code": "01",
+        "description": "Ventas",
+        "link": "#",
+        "icon": "icon-ventas"
+    },
+    {
+        "code": "0101",
+        "description": "Toma de pedido",
+        "link": "getTomaPedido",
+        "icon": "icon-pedidos"
+    },
+    {
+        "code": "010101",
+        "description": "Toma de pedido interno",
+        "link": "getTomaPedidoInterno",
+        "icon": "icon-pedidos-interno"
+    },
+    {
+        "code": "010102",
+        "description": "Toma de pedido público",
+        "link": "getTomaPedidoPublico",
+        "icon": "icon-pedidos-publico"
+    },
+    {
+        "code": "0102",
+        "description": "Consulta de pedido",
+        "link": "getPedidos",
+        "icon": "icon-consulta-pedidos"
+    }
+]

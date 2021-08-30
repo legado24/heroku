@@ -1,7 +1,7 @@
 package com.legado.appventa.service;
 
 import com.legado.appventa.dao.CompanyDao;
-import com.legado.appventa.response.CompanyResponse;
+import com.legado.appventa.response.CompanyListResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ public class CompanyServiceImpl implements CompanyService {
     private CompanyDao companyDao;
 
     @Override
-    public CompanyResponse listCompany() {
+    public CompanyListResponse listCompany() {
 
         return companyDao.listCompany();
     }
